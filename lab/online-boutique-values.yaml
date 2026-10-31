@@ -1,0 +1,29 @@
+# Trimmed Online Boutique for the KubeProof lab (8 GB RAM budget).
+# Kept: frontend, productCatalogService, currencyService, cartService, redis (cartDatabase).
+# Turned off: adService, checkoutService, emailService, loadGenerator,
+#             paymentService, recommendationService, shippingService.
+
+adService:
+  create: false
+
+checkoutService:
+  create: false
+
+emailService:
+  create: false
+
+loadGenerator:
+  create: false
+
+paymentService:
+  create: false
+
+recommendationService:
+  create: false
+
+shippingService:
+  create: false
+
+# Keep the frontend reachable without a cloud LoadBalancer (minikube has none).
+frontend:
+  externalService: false
